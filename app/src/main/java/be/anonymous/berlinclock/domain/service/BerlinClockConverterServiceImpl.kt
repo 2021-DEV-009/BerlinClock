@@ -26,4 +26,9 @@ class BerlinClockConverterServiceImpl : BerlinClockConverterService {
         }.joinToString("")
     }
 
+    override fun getSingleHoursRow(digitalTime: DigitalTime): String {
+        val amountOfHours = digitalTime.hours % 5
+        return "R".repeat(amountOfHours) + "O".repeat(4 - amountOfHours)
+    }
+
 }

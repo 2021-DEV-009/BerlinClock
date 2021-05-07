@@ -64,5 +64,33 @@ class BerlinClockConverterServiceTest {
         ), results)
     }
 
+    @Test
+    fun getSingleHoursRow_returnsSingleHoursString() {
+        // Arrange
+        val times = listOf(
+                DigitalTime(hours = 0, minutes = 0, seconds = 0),
+                DigitalTime(hours = 23, minutes = 59, seconds = 59),
+                DigitalTime(hours = 6, minutes = 4, seconds = 0),
+                DigitalTime(hours = 2, minutes = 4, seconds = 0),
+                DigitalTime(hours = 8, minutes = 23, seconds = 0),
+                DigitalTime(hours = 14, minutes = 35, seconds = 0),
+        )
+
+        // Act
+        val results = times.map {
+            service.getSingleHoursRow(it)
+        }
+
+        // Assert
+        Assert.assertEquals(listOf(
+                "OOOO",
+                "RRRO",
+                "ROOO",
+                "RROO",
+                "RRRO",
+                "RRRR",
+        ), results)
+    }
+
 
 }
