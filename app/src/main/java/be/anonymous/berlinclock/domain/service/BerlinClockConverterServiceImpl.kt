@@ -36,4 +36,11 @@ class BerlinClockConverterServiceImpl : BerlinClockConverterService {
         return "R".repeat(amountOf5HourBlocks) + "O".repeat(4 - amountOf5HourBlocks)
     }
 
+    override fun getSecondsStatus(digitalTime: DigitalTime): String {
+        return if (digitalTime.seconds % 2 == 0) {
+            "Y"
+        } else {
+            "O"
+        }
+    }
 }

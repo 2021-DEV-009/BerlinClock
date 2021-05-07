@@ -34,4 +34,11 @@ interface BerlinClockConverterService {
      */
     fun getFiveHoursHoursRow(digitalTime: DigitalTime): String
 
+    /**
+     * Returns a single character indicating if the current second is even or not
+     * Y = yellow = even
+     * O = off = odd
+     */
+    fun getSecondsStatus(digitalTime: DigitalTime): String
+
 }
