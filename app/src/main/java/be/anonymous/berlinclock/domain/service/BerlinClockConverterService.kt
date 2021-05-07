@@ -11,4 +11,13 @@ interface BerlinClockConverterService {
      */
     fun getSingleMinutesRow(digitalTime: DigitalTime): String
 
+    /**
+     * Returns a row of 11 characters indicating 5 minute block.
+     * Every third lamp is red.
+     * Y = yellow
+     * R = red
+     * O = off
+     */
+    fun getFiveMinutesRow(digitalTime: DigitalTime): String
+
 }

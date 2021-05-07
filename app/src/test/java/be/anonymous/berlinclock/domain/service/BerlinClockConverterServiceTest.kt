@@ -37,6 +37,32 @@ class BerlinClockConverterServiceTest {
                 "OOOO"
         ), results)
     }
-    
+
+    @Test
+    fun getFiveMinutesRow_returnsFiveMinutesString() {
+        // Arrange
+        val times = listOf(
+                DigitalTime(hours = 0, minutes = 0, seconds = 0),
+                DigitalTime(hours = 23, minutes = 59, seconds = 59),
+                DigitalTime(hours = 12, minutes = 4, seconds = 0),
+                DigitalTime(hours = 12, minutes = 23, seconds = 0),
+                DigitalTime(hours = 12, minutes = 35, seconds = 0),
+        )
+
+        // Act
+        val results = times.map {
+            service.getFiveMinutesRow(it)
+        }
+
+        // Assert
+        Assert.assertEquals(listOf(
+                "OOOOOOOOOOO",
+                "YYRYYRYYRYY",
+                "OOOOOOOOOOO",
+                "YYRYOOOOOOO",
+                "YYRYYRYOOOO",
+        ), results)
+    }
+
 
 }
