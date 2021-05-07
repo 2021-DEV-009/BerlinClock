@@ -9,6 +9,30 @@ class BerlinClockConverterServiceTest {
     private val service = BerlinClockConverterServiceImpl()
 
     @Test
+    fun getFullBerlinClock_returnsBerlinClockString() {
+        // Arrange
+        val times = listOf(
+                DigitalTime(hours = 0, minutes = 0, seconds = 0),
+                DigitalTime(hours = 23, minutes = 59, seconds = 59),
+                DigitalTime(hours = 16, minutes = 50, seconds = 6),
+                DigitalTime(hours = 11, minutes = 37, seconds = 1),
+        )
+
+        // Act
+        val results = times.map {
+            service.getFullBerlinClock(it)
+        }
+
+        // Assert
+        Assert.assertEquals(listOf(
+                "YOOOOOOOOOOOOOOOOOOOOOOO",
+                "ORRRRRRROYYRYYRYYRYYYYYY",
+                "YRRROROOOYYRYYRYYRYOOOOO",
+                "ORROOROOOYYRYYRYOOOOYYOO",
+        ), results)
+    }
+
+    @Test
     fun getSingleMinutesRow_returnsMinutesString() {
         // Arrange
         val times = listOf(

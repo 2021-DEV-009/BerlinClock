@@ -5,6 +5,14 @@ import be.anonymous.berlinclock.domain.data.DigitalTime
 interface BerlinClockConverterService {
 
     /**
+     * Returns the entire berlin clock as a single string.
+     * Y = yellow
+     * R = red
+     * O = off
+     */
+    fun getFullBerlinClock(digitalTime: DigitalTime): String
+
+    /**
      * Returns a row of 4 characters indicating 1 minute blocks.
      * Y = yellow
      * O = off

@@ -5,6 +5,14 @@ import kotlin.math.floor
 
 class BerlinClockConverterServiceImpl : BerlinClockConverterService {
 
+    override fun getFullBerlinClock(digitalTime: DigitalTime): String {
+        return getSecondsStatus(digitalTime) +
+                getFiveHoursHoursRow(digitalTime) +
+                getSingleHoursRow(digitalTime) +
+                getFiveMinutesRow(digitalTime) +
+                getSingleMinutesRow(digitalTime)
+    }
+
     override fun getSingleMinutesRow(digitalTime: DigitalTime): String {
         val amountOfMinutes = digitalTime.minutes % 5
         return "Y".repeat(amountOfMinutes) + "O".repeat(4 - amountOfMinutes)
