@@ -31,4 +31,9 @@ class BerlinClockConverterServiceImpl : BerlinClockConverterService {
         return "R".repeat(amountOfHours) + "O".repeat(4 - amountOfHours)
     }
 
+    override fun getFiveHoursHoursRow(digitalTime: DigitalTime): String {
+        val amountOf5HourBlocks = floor(digitalTime.hours / 5.0).toInt()
+        return "R".repeat(amountOf5HourBlocks) + "O".repeat(4 - amountOf5HourBlocks)
+    }
+
 }

@@ -27,4 +27,11 @@ interface BerlinClockConverterService {
      */
     fun getSingleHoursRow(digitalTime: DigitalTime): String
 
+    /**
+     * Returns a row of 4 characters indicating 5 hour blocks.
+     * R = red
+     * O = off
+     */
+    fun getFiveHoursHoursRow(digitalTime: DigitalTime): String
+
 }
