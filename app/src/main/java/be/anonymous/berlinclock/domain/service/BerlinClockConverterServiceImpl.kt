@@ -21,7 +21,7 @@ class BerlinClockConverterServiceImpl : BerlinClockConverterService {
     override fun getFiveMinutesRow(digitalTime: DigitalTime): String {
         val amountOf5MinuteBlocks = floor(digitalTime.minutes / 5.0).toInt()
 
-        return (0 until 11).map { i ->
+        return (0 until 11).joinToString("") { i ->
             if (i < amountOf5MinuteBlocks) {
                 if (i % 3 == 2) {
                     "R"
@@ -31,7 +31,7 @@ class BerlinClockConverterServiceImpl : BerlinClockConverterService {
             } else {
                 "O"
             }
-        }.joinToString("")
+        }
     }
 
     override fun getSingleHoursRow(digitalTime: DigitalTime): String {
