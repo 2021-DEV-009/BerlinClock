@@ -3,8 +3,10 @@ package be.anonymous.berlinclock.presentation.mapper
 import androidx.annotation.ColorRes
 import be.anonymous.berlinclock.R
 import be.anonymous.berlinclock.presentation.exception.ColorMapperException
+import javax.inject.Inject
 
-class BerlinClockCharacterToColorResMapperImpl : BerlinClockCharacterToColorMapper {
+class BerlinClockCharacterToColorMapperImpl @Inject constructor()
+    : BerlinClockCharacterToColorMapper {
 
     @ColorRes
     override fun map(char: Char): Int {

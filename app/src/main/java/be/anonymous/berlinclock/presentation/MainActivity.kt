@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import be.anonymous.berlinclock.R
 import be.anonymous.berlinclock.presentation.fragment.BerlinClockFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,4 +18,5 @@ class MainActivity : AppCompatActivity() {
                     .commitNow()
         }
     }
+
 }

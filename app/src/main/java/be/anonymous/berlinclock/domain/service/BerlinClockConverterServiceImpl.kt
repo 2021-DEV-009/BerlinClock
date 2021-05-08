@@ -1,9 +1,11 @@
 package be.anonymous.berlinclock.domain.service
 
 import be.anonymous.berlinclock.domain.data.DigitalTime
+import javax.inject.Inject
 import kotlin.math.floor
 
-class BerlinClockConverterServiceImpl : BerlinClockConverterService {
+class BerlinClockConverterServiceImpl @Inject constructor()
+    : BerlinClockConverterService {
 
     override fun getFullBerlinClock(digitalTime: DigitalTime): String {
         return getSecondsStatus(digitalTime) +

@@ -5,8 +5,9 @@ import be.anonymous.berlinclock.domain.service.CalendarToDigitalTimeConverterSer
 import be.anonymous.berlinclock.domain.service.CurrentTimeService
 import io.reactivex.rxjava3.core.Flowable
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-class GetCurrentTimeAsBerlinClockUseCaseImpl(
+class GetCurrentTimeAsBerlinClockUseCaseImpl @Inject constructor(
         private val currentTimeService: CurrentTimeService,
         private val calendarToDigitalTimeConverterService: CalendarToDigitalTimeConverterService,
         private val berlinClockConverterService: BerlinClockConverterService

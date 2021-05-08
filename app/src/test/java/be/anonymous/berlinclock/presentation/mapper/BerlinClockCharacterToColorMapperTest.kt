@@ -7,7 +7,7 @@ import org.junit.Test
 
 class BerlinClockCharacterToColorMapperTest {
 
-    private val mapper = BerlinClockCharacterToColorResMapperImpl()
+    private val mapper = BerlinClockCharacterToColorMapperImpl()
 
     @Test
     fun map_whenR_returnRedColorRes() {

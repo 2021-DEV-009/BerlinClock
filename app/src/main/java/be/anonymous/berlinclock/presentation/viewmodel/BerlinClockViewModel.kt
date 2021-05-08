@@ -5,9 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.toLiveData
 import be.anonymous.berlinclock.application.usecase.GetCurrentTimeAsBerlinClockUseCase
 import be.anonymous.berlinclock.presentation.mapper.BerlinClockCharacterToColorMapper
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.core.Flowable
+import javax.inject.Inject
 
-class BerlinClockViewModel(
+@HiltViewModel
+class BerlinClockViewModel @Inject constructor(
         private val getCurrentTimeAsBerlinClockUseCase: GetCurrentTimeAsBerlinClockUseCase,
         private val berlinClockCharacterToColorMapper: BerlinClockCharacterToColorMapper
 ) : ViewModel() {
