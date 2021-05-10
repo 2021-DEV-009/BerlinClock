@@ -10,7 +10,7 @@ import io.reactivex.rxjava3.core.Flowable
 import javax.inject.Inject
 
 @HiltViewModel
-class BerlinClockViewModel @Inject constructor(
+open class BerlinClockViewModel @Inject constructor(
         private val getCurrentTimeAsBerlinClockUseCase: GetCurrentTimeAsBerlinClockUseCase,
         private val berlinClockCharacterToColorMapper: BerlinClockCharacterToColorMapper
 ) : ViewModel() {
