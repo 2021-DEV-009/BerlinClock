@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/berlin_clock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fragment_padding"
+    tools:context=".presentation.fragment.BerlinClockFragment">
+
+    <!-- Seconds -->
+
+    <View
+        android:id="@+id/view_seconds"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/clock_lights_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@id/view_five_hours_1"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Five Hours -->
+
+    <View
+        android:id="@+id/view_five_hours_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/clock_lights_vertical_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginBottom="@dimen/clock_lights_vertical_margin"
+        android:background="@drawable/clock_light_rectangle"
+        app:layout_constraintBottom_toTopOf="@id/view_hours_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_hours_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_seconds" />
+
+    <View
+        android:id="@+id/view_five_hours_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_hours_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_hours_3"
+        app:layout_constraintStart_toEndOf="@id/view_five_hours_1"
+        app:layout_constraintTop_toTopOf="@id/view_five_hours_1" />
+
+    <View
+        android:id="@+id/view_five_hours_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_hours_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_hours_4"
+        app:layout_constraintStart_toEndOf="@id/view_five_hours_2"
+        app:layout_constraintTop_toTopOf="@id/view_five_hours_1" />
+
+    <View
+        android:id="@+id/view_five_hours_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_hours_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_five_hours_3"
+        app:layout_constraintTop_toTopOf="@id/view_five_hours_1" />
+
+    <!-- Single Hours -->
+
+    <View
+        android:id="@+id/view_hours_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/clock_lights_vertical_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginBottom="@dimen/clock_lights_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_hours_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_five_hours_1" />
+
+    <View
+        android:id="@+id/view_hours_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_hours_1"
+        app:layout_constraintEnd_toStartOf="@id/view_hours_3"
+        app:layout_constraintStart_toEndOf="@id/view_hours_1"
+        app:layout_constraintTop_toTopOf="@id/view_hours_1" />
+
+    <View
+        android:id="@+id/view_hours_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_hours_1"
+        app:layout_constraintEnd_toStartOf="@id/view_hours_4"
+        app:layout_constraintStart_toEndOf="@id/view_hours_2"
+        app:layout_constraintTop_toTopOf="@id/view_hours_1" />
+
+    <View
+        android:id="@+id/view_hours_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_hours_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_hours_3"
+        app:layout_constraintTop_toTopOf="@id/view_hours_1" />
+
+    <!-- Five Minutes -->
+
+    <View
+        android:id="@+id/view_five_minutes_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/clock_lights_vertical_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginBottom="@dimen/clock_lights_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@id/view_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_hours_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_3"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_1"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_4"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_2"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_5"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_3"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_6"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_4"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_7"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_5"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_8"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_6"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_9"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_7"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_10"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_8"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_five_minutes_11"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_9"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_five_minutes_11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_five_minutes_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_five_minutes_10"
+        app:layout_constraintTop_toTopOf="@id/view_five_minutes_1" />
+
+
+    <!-- Single Minutes -->
+
+    <View
+        android:id="@+id/view_minutes_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/clock_lights_vertical_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_minutes_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_five_minutes_1" />
+
+    <View
+        android:id="@+id/view_minutes_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_minutes_3"
+        app:layout_constraintStart_toEndOf="@id/view_minutes_1"
+        app:layout_constraintTop_toTopOf="@id/view_minutes_1" />
+
+    <View
+        android:id="@+id/view_minutes_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        android:layout_marginEnd="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_minutes_1"
+        app:layout_constraintEnd_toStartOf="@id/view_minutes_4"
+        app:layout_constraintStart_toEndOf="@id/view_minutes_2"
+        app:layout_constraintTop_toTopOf="@id/view_minutes_1" />
+
+    <View
+        android:id="@+id/view_minutes_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/clock_lights_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@id/view_minutes_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_minutes_3"
+        app:layout_constraintTop_toTopOf="@id/view_minutes_1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

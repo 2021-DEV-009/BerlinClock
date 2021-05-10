@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Berlin Clock Colors -->
+    <color name="clock_light_border">#515151</color>
+    <color name="clock_red">#EB3223</color>
+    <color name="clock_yellow">#FFFD54</color>
+    <color name="clock_off">#00000000</color>
+
 </resources>
